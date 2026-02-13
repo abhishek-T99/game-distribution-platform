@@ -1,16 +1,17 @@
 [tool.black]
 line-length = 88
-target-version = ["py314"]
-
-[tool.isort]
-profile = "black"
+target-version = ["py312"]
+skip-string-normalization = false
 
 [tool.ruff]
 line-length = 88
-select = ["E", "F", "I"]
-ignore = ["E501"]
-fix = true
 
-[tool.mypy]
-python_version = "3.14"
-ignore_missing_imports = false
+[tool.ruff.lint]
+select = ["E", "F", "I", "Q"]
+ignore = ["E501"]
+
+[tool.ruff.lint.flake8-quotes]
+inline-quotes = "double"
+
+[tool.ruff.lint.per-file-ignores]
+"config/settings/*.py" = ["F403", "F405"]
