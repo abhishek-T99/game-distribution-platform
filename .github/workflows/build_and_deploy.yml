@@ -1,11 +1,11 @@
+name: Manual Only Workflow
+
 on:
   workflow_dispatch:
-    inputs:
-      environment:
-        description: "Where to deploy?"
-        required: true
-        default: "development"
-        type: choice
-        options:
-          - development
-          - production
+
+jobs:
+  placeholder:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Manual trigger confirmed
+        run: echo "Workflow executed manually."
