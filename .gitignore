@@ -1,0 +1,88 @@
+# -----------------------------
+# Python
+# -----------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+directory_structure.md
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# -----------------------------
+# Django
+# -----------------------------
+*.log
+local_settings.py
+db.sqlite3
+db.dev.sqlite3
+db.sqlite3-journal
+media/
+staticfiles/
+
+# Migrations cache (keep migrations, ignore compiled)
+*/migrations/__pycache__/
+
+# -----------------------------
+# Environment variables
+# -----------------------------
+.env
+.env.*
+!.env.template
+
+# -----------------------------
+# Pytest / coverage
+# -----------------------------
+.coverage
+.coverage.*
+htmlcov/
+.pytest_cache/
+
+# -----------------------------
+# IDE / Editor
+# -----------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# -----------------------------
+# OS files
+# -----------------------------
+.DS_Store
+Thumbs.db
+
+# -----------------------------
+# Docker
+# -----------------------------
+*.pid
+*.seed
+*.sock
+docker-compose.override.yml
+
+# -----------------------------
+# Celery
+# -----------------------------
+celerybeat-schedule
+
+# -----------------------------
+# Logs
+# -----------------------------
+logs/
+*.log
+
+# -----------------------------
+# Static build artifacts
+# -----------------------------
+static/
+node_modules/
