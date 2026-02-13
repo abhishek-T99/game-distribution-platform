@@ -1,0 +1,11 @@
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: "Where to deploy?"
+        required: true
+        default: "development"
+        type: choice
+        options:
+          - development
+          - production
