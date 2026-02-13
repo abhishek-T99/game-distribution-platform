@@ -10,6 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/6.0/ref/settings/
 """
 
+import os
+from datetime import timedelta
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -28,7 +30,7 @@ INSTALLED_APPS = [
     "rest_framework",
     "drf_spectacular",
     "apps.common",
-    "apps.users",
+    "apps.user",
 ]
 
 MIDDLEWARE = [
@@ -61,7 +63,12 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "config.wsgi.application"
 
-AUTH_USER_MODEL = "users.User"
+AUTH_USER_MODEL = "user.User"
+
+JWT_SECRET_KEY = os.getenv("JWT_SECRET_KEY", None)
+JWT_ALGORITHM = os.getenv("JWT_ALGORITHM", None)
+JWT_ACCESS_TOKEN_EXPIRY = timedelta(minutes=30)
+JWT_REFRESH_TOKEN_EXPIRY = timedelta(days=7)
 
 # Password validation
 # https://docs.djangoproject.com/en/6.0/ref/settings/#auth-password-validators
