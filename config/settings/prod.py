@@ -9,24 +9,18 @@ SECRET_KEY = os.environ["SECRET_KEY"]
 ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "").split(",")
 
 ## Use PostgreSQL in production environment
-# DATABASES = {
-#     "default": {
-#         "ENGINE": "django.db.backends.postgresql",
-#         "NAME": os.environ["POSTGRES_DB"],
-#         "USER": os.environ["POSTGRES_USER"],
-#         "PASSWORD": os.environ["POSTGRES_PASSWORD"],
-#         "HOST": os.environ.get("POSTGRES_HOST", "db"),
-#         "PORT": os.environ.get("POSTGRES_PORT", "5432"),
-#         "CONN_MAX_AGE": 60,
-#     }
-# }
-
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.prod.sqlite3",
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": os.environ["POSTGRES_PROD_DB"],
+        "USER": os.environ["POSTGRES_PROD_USER"],
+        "PASSWORD": os.environ["POSTGRES_PROD_PASSWORD"],
+        "HOST": os.environ.get("POSTGRES_PROD_HOST", "db"),
+        "PORT": os.environ.get("POSTGRES_PROD_PORT", "5432"),
+        "CONN_MAX_AGE": 60,
     }
 }
+
 
 SECURE_SSL_REDIRECT = True
 SESSION_COOKIE_SECURE = True
