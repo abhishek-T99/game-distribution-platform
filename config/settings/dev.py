@@ -23,11 +23,22 @@ DATABASES = {
     }
 }
 
+SPECTACULAR_SETTINGS = {
+    "TITLE": "Game Platform API",
+    "DESCRIPTION": "Game Distribution Platform API",
+    "VERSION": "1.0.0",
+    "SERVE_INCLUDE_SCHEMA": False,
+}
+
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
 # DRF dev settings
 REST_FRAMEWORK = {
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
+    "DEFAULT_AUTHENTICATION_CLASSES": [
+        "rest_framework.authentication.SessionAuthentication",
+    ],
     "DEFAULT_PERMISSION_CLASSES": [
         "rest_framework.permissions.AllowAny",
-    ]
+    ],
 }

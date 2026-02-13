@@ -3,3 +3,4 @@ isort
 ruff
 mypy
 pre-commit
+drf-spectacular
