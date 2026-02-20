@@ -63,6 +63,18 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "config.wsgi.application"
 
+
+REST_FRAMEWORK = {
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
+    "DEFAULT_AUTHENTICATION_CLASSES": [
+        "apps.user.authentication.JWTAuthentication",
+    ],
+    "DEFAULT_PERMISSION_CLASSES": [
+        "rest_framework.permissions.IsAuthenticated",
+    ],
+}
+
+
 AUTH_USER_MODEL = "user.User"
 
 JWT_SECRET_KEY = os.getenv("JWT_SECRET_KEY", None)
