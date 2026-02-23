@@ -85,3 +85,11 @@ def revoke_refresh_token(token_str: str):
         return
     token.is_revoked = True
     token.save(update_fields=["is_revoked"])
+
+
+def just_for_commit():
+    """
+    This function is just a placeholder to ensure that the file is not empty.
+    It can be removed or modified as needed.
+    """
+    pass
