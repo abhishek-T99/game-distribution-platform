@@ -95,5 +95,6 @@ def just_for_commit():
     Just for commit
     Just for commit
     Just for commit
+    Another commit
     """
     return
