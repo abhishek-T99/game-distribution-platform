@@ -101,6 +101,5 @@ def just_for_commit():
     git history
     git history
     git history
-    git history
     """
     return
