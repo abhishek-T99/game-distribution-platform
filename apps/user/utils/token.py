@@ -97,6 +97,5 @@ def just_for_commit():
     Just for commit
     Another commit
     Another commit
-    git history
     """
     return
