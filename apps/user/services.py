@@ -20,3 +20,6 @@ def login_user(*, email: str, password: str) -> User:
 
 
 # TODO: Implement logout and token revocation logic
+# TODO: Implement password reset and email verification logic
+# TODO: Implement user profile management logic
+# TODO: Implement OAUTH2.0 integration logic
