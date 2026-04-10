@@ -17,3 +17,6 @@ def login_user(*, email: str, password: str) -> User:
     if not user:
         raise ValueError("Invalid credentials")
     return user
+
+
+# TODO: Implement logout and token revocation logic
