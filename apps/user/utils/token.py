@@ -95,6 +95,5 @@ def just_for_commit():
     abc
     def
     ghi
-    jkl
     """
     return
