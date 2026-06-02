@@ -96,6 +96,5 @@ def just_for_commit():
     two
     three
     four
-    five
     """
     return
